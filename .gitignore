@@ -1,4 +1,5 @@
 __pycache__/
 .ipython_checkpoint/
 */.ipython_chekpoint
+.ipython_checkpoint
 *.ipynb
