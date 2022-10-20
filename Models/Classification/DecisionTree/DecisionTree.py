@@ -14,8 +14,10 @@ def calculate_gini(data, label, feature_idx, threshold):
     classes = np.unique(label)
 
     for c in classes:
-        score_left += float((np.sum(label_left == c) / len(label_left))**2)
-        score_right += float((np.sum(label_right == c) / len(label_right))**2)
+        if len(label_left) != 0:
+            score_left += float((np.sum(label_left == c) / len(label_left))**2)
+        if len(label_right) != 0:
+            score_right += float((np.sum(label_right == c) / len(label_right))**2)
 
     gini = ((1 - score_left)*len(label_left) + (1 - score_right)*len(label_right)) / data_size
 
@@ -52,14 +54,17 @@ class DecisionTreeNode():
         self.threshold = None
         self.feature_idx = None
         self.gini_min = None
-        self.output = np.argmax(np.bincount(label))
+        if len(self.label) != 0:
+            self.output = np.argmax(np.bincount(self.label))
+        else:
+            self.output = None
         
     
     def fit(self, depth):
         self.depth = depth
         self.gini_min, self.threshold, self.feature_idx = search_best_split(self.data, self.label)
         
-        if self.depth == self.max_depth or self.gini_min == 0:
+        if self.depth == self.max_depth or self.gini_min == 0 or len(self.label) == 0:
             return
         
         left_idx = self.data[:, self.feature_idx] >= self.threshold
@@ -72,8 +77,9 @@ class DecisionTreeNode():
         
         
     def predict(self, data):
-        if self.gini_min == 0. or self.depth == self.max_depth:
+        if self.gini_min == 0. or self.depth == self.max_depth or len(self.label) == 0:
             return self.output
+        
         else:
             if data[self.feature_idx] > self.threshold:
                 return self.left.predict(data)
@@ -82,7 +88,7 @@ class DecisionTreeNode():
             
             
 class DecisionTreeClassifier():
-    def __init__(self, max_depth):
+    def __init__(self, max_depth=3):
         self.max_depth = max_depth
         self.tree = None
    

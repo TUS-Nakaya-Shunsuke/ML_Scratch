@@ -7,6 +7,11 @@ This is a Library of ML written from scratch for study purposes.
 ML_Scratch
 |-- Models
 |   |-- Classification
+|   |   |-- DecisionTree
+|   |   |   |-- DecisionTree.py
+|   |   |   |-- RamdomForest.ipynb
+|   |   |   |-- RamdomForest.py
+|   |   |   |-- Scratch_DecisionTree.ipynb
 |   |   `-- SVM
 |   |       |-- SVM.py
 |   |       |-- Scratch_SVM.ipynb
@@ -17,7 +22,7 @@ ML_Scratch
 |           |-- Scratch_Linear_Regression.ipynb
 |-- Preprocessing
 |   |-- Standard_Scaler.py
-|   `-- Train_Test_Split.py
+|   |-- Train_Test_Split.py
 |-- README.md
 `-- __init__.py
 </pre>
