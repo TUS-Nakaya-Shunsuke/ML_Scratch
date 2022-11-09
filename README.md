@@ -1,21 +1,24 @@
 # ML Scratch
 
-This is a Library of ML written from scratch for study purposes. 
+This is a Library of Machine Learning written by scratching for study purposes. 
 
 # Directory
 <pre>
-ML_Scratch
+.
 |-- Models
 |   |-- Classification
 |   |   |-- DecisionTree
 |   |   |   |-- DecisionTree.py
-|   |   |   |-- RamdomForest.ipynb
-|   |   |   |-- RamdomForest.py
+|   |   |   |-- RandomForest.py
 |   |   |   |-- Scratch_DecisionTree.ipynb
+|   |   |   |-- Scratch_RandomForest.ipynb
 |   |   `-- SVM
 |   |       |-- SVM.py
 |   |       |-- Scratch_SVM.ipynb
 |   |-- Clustering
+|   |-- PCA
+|   |   |-- PCA.py
+|   |   |-- Scratch_PCA.ipynb
 |   `-- Regression
 |       `-- Linear_Regression
 |           |-- Linear_Regression.py
@@ -26,3 +29,6 @@ ML_Scratch
 |-- README.md
 `-- __init__.py
 </pre>
+
+I don't push .ipynb files.
+
