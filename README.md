@@ -16,6 +16,7 @@ This is a Library of Machine Learning written by scratching for study purposes.
 |   |       |-- SVM.py
 |   |       |-- Scratch_SVM.ipynb
 |   |-- Clustering
+|   |   `-- k_means.py
 |   |-- PCA
 |   |   |-- PCA.py
 |   |   |-- Scratch_PCA.ipynb
