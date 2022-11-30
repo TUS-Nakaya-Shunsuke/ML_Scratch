@@ -12,12 +12,15 @@ This is a Library of Machine Learning written by scratching for study purposes.
 |   |   |   |-- RandomForest.py
 |   |   |   |-- Scratch_DecisionTree.ipynb
 |   |   |   `-- Scratch_RandomForest.ipynb
-|   |   `-- SVM
+|   |   |-- SVM
 |   |   |   |-- SVM.py
-|   |   |   |-- Scratch_SVM.ipynb
-|   |   `-- KNN
-|   |       |-- Scratch_KNN.ipynb
-|   |       `-- KNN.py
+|   |   |   `-- Scratch_SVM.ipynb
+|   |   |-- KNN
+|   |   |   |-- Scratch_KNN.ipynb
+|   |   |   `-- KNN.py
+|   |   |-- LogisticRegression
+|   |       |-- Scratch_LogisticRegression.ipynb
+|   |       `-- LogisticRegression.py
 |   |-- Clustering
 |   |   |-- k_means.py
 |   |   `-- Scratch_k_means.ipynb
